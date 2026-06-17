@@ -19,16 +19,18 @@ on conflict do nothing;
 En Supabase, copia:
 
 - `Project URL`
-- `anon public key`
+- `publishable key` (`sb_publishable_...`)
 
 En local crea `frontend/.env` usando `frontend/.env.example`:
 
 ```env
 VITE_SUPABASE_URL=https://TU-PROYECTO.supabase.co
-VITE_SUPABASE_ANON_KEY=TU_ANON_KEY
+VITE_SUPABASE_PUBLISHABLE_KEY=TU_PUBLISHABLE_KEY
 ```
 
 En Cloudflare Pages anade las mismas variables en `Settings > Environment variables`.
+
+No uses una clave `sb_secret_...` en Cloudflare Pages ni en React. Esa clave es solo para backend seguro.
 
 ## 3. Cloudflare Pages
 
@@ -47,4 +49,3 @@ El archivo `frontend/public/_redirects` permite que funcionen `/admin-lebasy` y 
 - Las fotos se guardan en Supabase Storage, bucket `product-images`.
 - Los productos se guardan en la tabla `products`.
 - El admin usa Supabase Auth con email y contrasena.
-

@@ -25,7 +25,7 @@ Configura `frontend/.env`:
 
 ```env
 VITE_SUPABASE_URL=https://TU-PROYECTO.supabase.co
-VITE_SUPABASE_ANON_KEY=TU_ANON_KEY
+VITE_SUPABASE_PUBLISHABLE_KEY=TU_PUBLISHABLE_KEY
 ```
 
 ## Ejecutar en local
@@ -51,5 +51,5 @@ npm.cmd --prefix frontend run dev
 ## Notas de produccion
 
 - Crea el admin desde Supabase Authentication.
-- No subas claves privadas ni service-role keys al frontend.
-- El `anon key` de Supabase si puede estar en el frontend porque la seguridad real la aplican las politicas RLS.
+- No subas claves privadas, `service_role` ni claves `sb_secret_...` al frontend.
+- La `publishable key` de Supabase si puede estar en el frontend porque la seguridad real la aplican las politicas RLS.
