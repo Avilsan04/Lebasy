@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*.log
+backend/data/products.json
+backend-dev.cmd
+frontend-dev.cmd
+
