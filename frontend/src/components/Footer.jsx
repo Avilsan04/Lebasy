@@ -7,6 +7,7 @@ export function Footer() {
         <Logo className="footer-logo" />
       </a>
       <a href="tel:645752686">Contacto: 645752686</a>
+      <a href="mailto:isabelsanchezruiz842@gmail.com">isabelsanchezruiz842@gmail.com</a>
     </footer>
   );
 }
