@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:/Users/alvar/Desktop/Lebasy\" add frontend/src/api.js frontend/src/components/AdminPage.jsx frontend/src/components/PublicCatalog.jsx frontend/src/utils/image.js)",
+      "Bash(git -C c:/Users/alvar/Desktop/Lebasy commit -m ' *)",
+      "Bash(git -C \"c:/Users/alvar/Desktop/Lebasy\" add frontend/src/components/Footer.jsx)",
+      "Bash(git -C \"c:/Users/alvar/Desktop/Lebasy\" push origin main)"
+    ]
+  }
+}
