@@ -56,15 +56,15 @@ export function PublicCatalog({ products, loading, error }) {
       <section className="catalog-hero">
         <div className="hero-inner">
           <Logo className="hero-logo" />
-          <p className="eyebrow">Catalogo oficial</p>
+          <p className="eyebrow">Catálogo oficial</p>
           <h1>Inventario de productos</h1>
           <p className="hero-copy">
-            Seleccion cuidada de productos con estado de disponibilidad actualizado.
+            Selección cuidada de productos con estado de disponibilidad actualizado.
           </p>
         </div>
       </section>
 
-      <section className="catalog-shell" aria-label="Catalogo de productos">
+      <section className="catalog-shell" aria-label="Catálogo de productos">
         <div className="catalog-toolbar">
           <div className="catalog-heading">
             <p className="section-kicker">Inventario</p>
@@ -75,7 +75,7 @@ export function PublicCatalog({ products, loading, error }) {
               <input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Nombre o descripcion"
+                placeholder="Nombre o descripción"
               />
             </label>
           </div>
@@ -108,9 +108,9 @@ export function PublicCatalog({ products, loading, error }) {
               </label>
 
               <div className="category-filter">
-                <span>Categorias</span>
+                <span>Categorías</span>
                 {categories.length === 0 ? (
-                  <p>No hay categorias todavia.</p>
+                  <p>No hay categorías todavía.</p>
                 ) : (
                   <div className="category-options">
                     {categories.map((productCategory) => (
@@ -136,7 +136,7 @@ export function PublicCatalog({ products, loading, error }) {
         {!loading && !error && filteredProducts.length === 0 && (
           <div className="empty-state">
             <strong>No hay productos publicados.</strong>
-            <span>Cuando el administrador anada productos apareceran aqui.</span>
+            <span>Cuando el administrador añada productos aparecerán aquí.</span>
           </div>
         )}
 

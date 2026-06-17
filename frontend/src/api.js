@@ -5,7 +5,7 @@ const PRODUCT_IMAGES_BUCKET = 'product-images';
 
 function assertConfigured() {
   if (!isSupabaseConfigured || !supabase) {
-    throw new Error('Supabase no esta configurado. Revisa VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY.');
+    throw new Error('Supabase no está configurado. Revisa VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY.');
   }
 }
 
@@ -82,7 +82,7 @@ async function requireAdmin() {
   const isAdmin = await isAdminUser();
 
   if (!isAdmin) {
-    throw new Error('Debes iniciar sesion como administrador.');
+    throw new Error('Debes iniciar sesión como administrador.');
   }
 }
 
@@ -93,7 +93,7 @@ async function uploadProductImage(file, oldImagePath = '') {
 
   const user = await currentUser();
   if (!user) {
-    throw new Error('Debes iniciar sesion como administrador.');
+    throw new Error('Debes iniciar sesión como administrador.');
   }
 
   const filePath = `${user.id}/${crypto.randomUUID()}-${safeFileName(file.name)}`;
@@ -200,7 +200,7 @@ export const api = {
     });
 
     if (error) {
-      throw new Error('Usuario o contrasena incorrectos.');
+      throw new Error('Usuario o contraseña incorrectos.');
     }
 
     const isAdmin = await isAdminUser();

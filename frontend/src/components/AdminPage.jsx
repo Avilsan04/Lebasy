@@ -151,7 +151,7 @@ export function AdminPage({ onProductsChanged }) {
         setMessage('Producto actualizado.');
       } else {
         await api.createProduct(buildProductPayload(form));
-        setMessage('Producto anadido.');
+        setMessage('Producto añadido.');
       }
 
       await loadAdminProducts();
@@ -187,7 +187,7 @@ export function AdminPage({ onProductsChanged }) {
   }
 
   async function removeProduct(productId) {
-    const confirmed = window.confirm('Quieres eliminar este producto?');
+    const confirmed = window.confirm('¿Quieres eliminar este producto?');
     if (!confirmed) {
       return;
     }
@@ -209,7 +209,7 @@ export function AdminPage({ onProductsChanged }) {
   if (!sessionChecked) {
     return (
       <main className="admin-page compact-admin">
-        <p className="state-message">Verificando sesion...</p>
+        <p className="state-message">Verificando sesión...</p>
       </main>
     );
   }
@@ -219,7 +219,7 @@ export function AdminPage({ onProductsChanged }) {
       <main className="admin-page compact-admin">
         <form className="login-panel" onSubmit={handleLogin}>
           <Logo className="login-logo" />
-          <p className="section-kicker">Area privada</p>
+          <p className="section-kicker">Área privada</p>
           <h1>Administrador Lebasy</h1>
           <label>
             Email de administrador
@@ -231,7 +231,7 @@ export function AdminPage({ onProductsChanged }) {
             />
           </label>
           <label>
-            Contrasena
+            Contraseña
             <input
               type="password"
               value={credentials.password}
@@ -254,11 +254,11 @@ export function AdminPage({ onProductsChanged }) {
       <header className="admin-header">
         <div>
           <Logo className="admin-logo" />
-          <p className="section-kicker">Gestion interna</p>
+          <p className="section-kicker">Gestión interna</p>
           <h1>Inventario Lebasy</h1>
         </div>
         <button className="ghost-button" type="button" onClick={handleLogout}>
-          Cerrar sesion
+          Cerrar sesión
         </button>
       </header>
 
@@ -266,7 +266,7 @@ export function AdminPage({ onProductsChanged }) {
         <form className="product-form" onSubmit={handleSubmit}>
           <div>
             <p className="section-kicker">{editingProduct ? 'Editar producto' : 'Nuevo producto'}</p>
-            <h2>{editingProduct ? editingProduct.name : 'Anadir producto'}</h2>
+            <h2>{editingProduct ? editingProduct.name : 'Añadir producto'}</h2>
           </div>
 
           <label>
@@ -280,7 +280,7 @@ export function AdminPage({ onProductsChanged }) {
           </label>
 
           <label>
-            Categorias
+            Categorías
             <input
               value={form.categoriesText}
               onChange={(event) => setForm((current) => ({ ...current, categoriesText: event.target.value }))}
@@ -290,7 +290,7 @@ export function AdminPage({ onProductsChanged }) {
           </label>
 
           <label>
-            Descripcion
+            Descripción
             <textarea
               value={form.description}
               onChange={(event) => setForm((current) => ({ ...current, description: event.target.value }))}
@@ -332,7 +332,7 @@ export function AdminPage({ onProductsChanged }) {
 
           <div className="form-actions">
             <button className="primary-button" type="submit" disabled={loading}>
-              {loading ? 'Guardando...' : editingId ? 'Guardar cambios' : 'Anadir producto'}
+              {loading ? 'Guardando...' : editingId ? 'Guardar cambios' : 'Añadir producto'}
             </button>
             {editingId && (
               <button className="ghost-button" type="button" onClick={resetForm}>
@@ -352,8 +352,8 @@ export function AdminPage({ onProductsChanged }) {
 
           {products.length === 0 && (
             <div className="empty-state compact">
-              <strong>Sin productos todavia.</strong>
-              <span>Anade el primero desde el formulario.</span>
+              <strong>Sin productos todavía.</strong>
+              <span>Añade el primero desde el formulario.</span>
             </div>
           )}
 

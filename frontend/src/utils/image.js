@@ -6,7 +6,7 @@ export function fileToDataUrl(file) {
     }
 
     if (!file.type.startsWith('image/')) {
-      reject(new Error('Selecciona una imagen valida.'));
+      reject(new Error('Selecciona una imagen válida.'));
       return;
     }
 
